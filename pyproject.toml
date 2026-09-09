@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-to-json"
+version = "0.1.0"
+description = "Extract PDF text and form fields as JSON"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pypdf>=4.0"]
+
+[project.scripts]
+pdf-to-json = "pdf_to_json.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pdf_to_json*"]
